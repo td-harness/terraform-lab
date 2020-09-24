@@ -50,4 +50,32 @@ preDeploymentSteps:
       value: NB5a0epcQTuv6tDV1sZrwg
       valueType: ENCRYPTED_TEXT
     workspace: ''
+- type: TERRAFORM_APPLY
+  name: Terraform Apply
+  properties:
+    backendConfigs:
+    - name: access_key
+      value: I1oDJhuXQLCmF8kS7q08NQ
+      valueType: ENCRYPTED_TEXT
+    - name: secret_key
+      value: NB5a0epcQTuv6tDV1sZrwg
+      valueType: ENCRYPTED_TEXT
+    delegateTag: kube-deletgate1-dhtwev-0
+    exportPlanToApplyStep: false
+    inheritApprovedPlan: false
+    name: Terraform Apply
+    provisionerName: Clone of exercise_5 - tf
+    runPlanOnly: false
+    targets:
+    - aws_ecs_cluster.ecs-cluster-1
+    tfVarFiles: null
+    timeoutMillis: 300000
+    variables:
+    - name: access_key
+      value: I1oDJhuXQLCmF8kS7q08NQ
+      valueType: ENCRYPTED_TEXT
+    - name: secret_key
+      value: NB5a0epcQTuv6tDV1sZrwg
+      valueType: ENCRYPTED_TEXT
+    workspace: ''
 templatized: false
