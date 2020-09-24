@@ -31,9 +31,6 @@ phases:
     stepsInParallel: false
   - type: CONTAINER_DEPLOY
     name: Deploy Containers
-    steps:
-    - type: ECS_SERVICE_DEPLOY
-      name: Upgrade Containers
     stepsInParallel: false
   - type: VERIFY_SERVICE
     name: Verify Service
