@@ -27,7 +27,7 @@ preDeploymentSteps:
     - name: secret_key
       value: NB5a0epcQTuv6tDV1sZrwg
       valueType: ENCRYPTED_TEXT
-    delegateTag: kube-deletgate1-dhtwev-0
+    delegateTag: jeremynelsonmbp
     exportPlanToApplyStep: false
     inheritApprovedPlan: false
     name: Terraform Provision
