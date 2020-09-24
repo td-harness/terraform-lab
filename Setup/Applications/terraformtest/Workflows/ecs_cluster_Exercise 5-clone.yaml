@@ -31,7 +31,7 @@ preDeploymentSteps:
     exportPlanToApplyStep: false
     inheritApprovedPlan: false
     name: Terraform Provision
-    provisionerName: exercise_5 - tf
+    provisionerName: Clone of exercise_5 - tf
     runPlanOnly: false
     targets:
     - aws_ecs_cluster.ecs-cluster-1
