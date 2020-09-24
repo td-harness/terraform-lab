@@ -27,7 +27,7 @@ preDeploymentSteps:
     - name: secret_key
       value: NB5a0epcQTuv6tDV1sZrwg
       valueType: ENCRYPTED_TEXT
-    delegateTag: jeremynelsonmbp
+    delegateTag: kube-deletgate1-dhtwev-0
     exportPlanToApplyStep: false
     inheritApprovedPlan: false
     name: Terraform Provision
@@ -37,6 +37,9 @@ preDeploymentSteps:
     - aws_ecs_cluster.ecs-cluster-1
     - aws_launch_configuration.ecs-launch-configuration-1
     - aws_autoscaling_group.ecs-autoscaling-group-1
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
     tfVarFiles: null
     timeoutMillis: 300000
     variables:
