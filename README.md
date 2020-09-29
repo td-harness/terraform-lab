@@ -1,2 +1,2 @@
 # Terraform Training Exercises
-tsting 123
+testing 123
