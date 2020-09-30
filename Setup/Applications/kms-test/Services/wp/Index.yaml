@@ -1,0 +1,12 @@
+harnessApiVersion: '1.0'
+type: SERVICE
+artifactType: DOCKER
+configVariables:
+- name: username
+  value: csadmin-test12312312312
+  valueType: TEXT
+- name: cs-admin-pass
+  value: ${secrets.getValue{"csadmin-test"}}
+  valueType: TEXT
+deploymentType: KUBERNETES
+helmVersion: V2
