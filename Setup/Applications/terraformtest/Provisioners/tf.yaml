@@ -1,0 +1,15 @@
+harnessApiVersion: '1.0'
+type: TERRAFORM
+backendConfigs:
+- name: access_key
+  valueType: ENCRYPTED_TEXT
+- name: secret_key
+  valueType: ENCRYPTED_TEXT
+path: /exercise_5
+sourceRepoBranch: master
+sourceRepoSettingName: Terraform
+variables:
+- name: access_key
+  valueType: ENCRYPTED_TEXT
+- name: secret_key
+  valueType: ENCRYPTED_TEXT

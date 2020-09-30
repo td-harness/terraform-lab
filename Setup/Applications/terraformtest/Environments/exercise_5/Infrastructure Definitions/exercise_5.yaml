@@ -5,9 +5,9 @@ deploymentType: ECS
 infrastructure:
 - type: AWS_ECS
   assignPublicIp: true
-  cloudProviderName: Amazon Web Services
+  cloudProviderName: ECS
   expressions:
-    clusterName: ECSTF
-    region: us-east-2
+    clusterName: jn-test-tf-cluster
+    region: us-east-1
   launchType: EC2
-provisioner: Clone of exercise_5 - tf
+provisioner: exercise_5 - tf
