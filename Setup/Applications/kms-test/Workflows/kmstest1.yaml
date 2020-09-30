@@ -23,7 +23,7 @@ notificationRules:
   - z25IpXiKSO2QhfdIgtMnNQ
 phases:
 - type: KUBERNETES
-  computeProviderName: Kubernetes Cluster
+  computeProviderName: kube
   daemonSet: false
   infraDefinitionName: kube
   name: Rolling
@@ -45,7 +45,7 @@ phases:
   statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
-  computeProviderName: Kubernetes Cluster
+  computeProviderName: kube
   daemonSet: false
   infraDefinitionName: kube
   name: Rollback Rolling

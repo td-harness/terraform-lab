@@ -18,7 +18,7 @@ notificationRules:
   - z25IpXiKSO2QhfdIgtMnNQ
 phases:
 - type: KUBERNETES
-  computeProviderName: Kubernetes Cluster
+  computeProviderName: kube
   daemonSet: false
   infraDefinitionName: kube
   name: Canary
@@ -88,7 +88,7 @@ phases:
   serviceName: wp
   statefulSet: false
 - type: KUBERNETES
-  computeProviderName: Kubernetes Cluster
+  computeProviderName: kube
   daemonSet: false
   infraDefinitionName: kube
   name: Primary
@@ -110,7 +110,7 @@ phases:
   statefulSet: false
 rollbackPhases:
 - type: KUBERNETES
-  computeProviderName: Kubernetes Cluster
+  computeProviderName: kube
   daemonSet: false
   infraDefinitionName: kube
   name: Rollback Canary
@@ -150,7 +150,7 @@ rollbackPhases:
   serviceName: wp
   statefulSet: false
 - type: KUBERNETES
-  computeProviderName: Kubernetes Cluster
+  computeProviderName: kube
   daemonSet: false
   infraDefinitionName: kube
   name: Rollback Primary
