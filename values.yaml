@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: harness-example
+stringData:
+  sasljaas: ${secrets.getValue("sasl_jaas")}
+  simple_secret_test: ${secrets.getValue("sshtest")}
+  sasljaas2: ${secrets.getValue("sasl_jaas")}
