@@ -3,6 +3,6 @@ kind: Secret
 metadata:
   name: harness-example
 stringData:
-  sasljaas: ${secrets.getValue("sasl_jaas")}
+  sasljaas: ${secrets.getValue("sasljaas")}
   simple_secret_test: ${secrets.getValue("sshtest")}
-  sasljaas2: ${secrets.getValue("sasl_jaas")}
+  sasljaas2: ${secrets.getValue("sasljaas")}
