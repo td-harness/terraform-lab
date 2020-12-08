@@ -25,6 +25,6 @@ env:
   config:
     key1: value1
   secrets: 
-    jaasconfig: ${secrets.getAsText("jaasconfig")
+#    jaasconfig: ${secrets.getAsText("jaasconfig")
     jaasconfig: "${serviceVariable.jaasconfig}"
     jksPassword: "${serviceVariable.jksPassword}"
