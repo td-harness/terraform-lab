@@ -62,3 +62,5 @@ spec:
         - secretRef:
             name: {{.Values.name}}
         {{- end}}
+        {{- end}}
+
