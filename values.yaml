@@ -13,6 +13,7 @@ image:
   version: latest
 
 serviceName: "${service.name}"
+servicePort: 8080
 infraName: "${infra.name}"
 environment: "${env.name}"
 namespace: "${infra.kubernetes.namespace}"
