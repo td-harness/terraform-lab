@@ -22,7 +22,7 @@ tool_stack_id: "468a05ae-3de4-4fb6-916d-5673b8505152"
 profile: "${infra.name}"
 isMockEnable: "${serviceVariable.isMockEnable}"
 
-jaasconfig: "${serviceVariable.jaasconfig}"
+jaasconfig: ${serviceVariable.jaasconfig}
 jksPassword: "${serviceVariable.jksPassword}"
 
 artifact_management:
