@@ -1,30 +1,62 @@
-name: harness-example
-replicas: 1
+# Pod count.
+min_replicas: 1
+max_replicas: 1
+# Quotas. Consider the replica count when setting it.
+cpu_request: 60m
+cpu_limit: 300m
+memory_request: 760Mi
+memory_limit: 850Mi
 
-image: ${artifact.metadata.image}
-dockercfg: ${artifact.source.dockerconfig}
+# Docker Repository path.
+image:
+  #version: latest
+  version: latest
 
-createNamespace: true
-namespace: ${infra.kubernetes.namespace}
+serviceName: "${service.name}"
+infraName: "${infra.name}"
+environment: "${env.name}"
+namespace: "${infra.kubernetes.namespace}"
 
-# Service Type allow you to specify what kind of service you want.
-# Possible values for ServiceType are:
-# ClusterIP | NodePort | LoadBalancer | ExternalName
-serviceType: LoadBalancer
+tool_stack_id: "468a05ae-3de4-4fb6-916d-5673b8505152"
+profile: "${infra.name}"
+isMockEnable: "${serviceVariable.isMockEnable}"
 
-# A Service can map an incoming port to any targetPort.
-# targetPort is where application is listening on inside the container.
-servicePort: 80
-serviceTargetPort: 80
+jaasconfig: "${serviceVariable.jaasconfig}"
+jksPassword: "${serviceVariable.jksPassword}"
 
-# Specify all environment variables to be added to the container.
-# The following two maps, config and secrets, are put into a ConfigMap
-# and a Secret, respectively.
-# Both are added to the container environment in podSpec as envFrom source.
-env:
-  config:
-    key1: value1
-  secrets: 
-#    jaasconfig: ${secrets.getAsText("jaasconfig")
-    jaasconfig: "${serviceVariable.jaasconfig}"
-    jksPassword: "${serviceVariable.jksPassword}"
+artifact_management:
+  username: "${serviceVariable.artifactUsername}"
+  password: "${serviceVariable.artifactPassword}"
+
+releasenumber: ${workflow.releaseNo}
+
+# Env variables injected into the pod.
+environment_variables:
+#  - name: Hello
+#    value: World
+
+# Scaling.
+service_port: 80
+container_port: 8080
+
+# Health check spec.
+health_check:
+  liveness:
+    initialDelaySeconds: 240
+    httpGet:
+      scheme: HTTP
+      path: /actuator/health
+      port: 8080
+    httpGet:
+      scheme: HTTP
+      path: /actuator/info
+      port: 8080
+    timeoutSeconds: 5
+
+  readiness:
+    initialDelaySeconds: 240
+    httpGet:
+      scheme: HTTP
+      path: /actuator/health
+      port: 8080
+    timeoutSeconds: 5
