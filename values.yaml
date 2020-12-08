@@ -24,7 +24,7 @@ serviceTargetPort: 80
 env:
   config:
     key1: value1
-  secrets: 
-    jaasconfig: ${secrets.getAsText("jaasconfig")
+#  secrets: 
+#    jaasconfig: ${secrets.getAsText("jaasconfig")
 #    jaasconfig: "${serviceVariable.jaasconfig}"
 #    jksPassword: "${serviceVariable.jksPassword}"
